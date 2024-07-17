@@ -1,22 +1,23 @@
-import React from 'react'
+import React from "react";
+import { Link } from 'react-router-dom';
 import logo from "../assets/logo.svg";
+import '../Header.css';
+
 
 export const Header = () => {
   return (
     <header>
-        <span className='logo'>
-            <img src={logo} alt='log'/>
-            <span>Task mate</span>
-        </span>
-        <span className="themeSelector">
-            <span className="light"></span>
-            <span className="medium"></span>
-            <span className="dark"></span>
-            <span className="gOne"></span>
-            <span className="gTwo"></span>
-            <span className="gThree"></span>
-        </span>
-            
+      <span className="logo">
+        <span>DeutscheCare+ Planner</span>
+      </span>
+        <nav className="top-nav">
+          <Link to="/" className="nav-button">
+            Home
+          </Link>
+          <Link to="/profile" className="nav-button">
+            Profile
+          </Link>
+        </nav>
     </header>
-  )
-}
+  );
+};
